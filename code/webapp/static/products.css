@@ -1,0 +1,129 @@
+
+.form-control::placeholder {
+  color: rgb(10, 12, 13);
+}
+
+.form-control {
+  border-color: rgb(103, 202, 227);
+  color: rgb(78, 231, 255); 
+}
+.btn-outline-success {
+  border-color: rgb(89, 193, 211);
+  color: rgb(89, 189, 206); 
+}
+
+.form-group{
+  font-size: 15px;
+}
+
+.form-control{
+  height: 35px;
+
+}
+
+#redback {
+  background-color: rgb(92, 189, 228);
+}
+#redtext {
+  color: rgb(0, 0, 0);
+}
+
+.categories-nav{
+  border-radius: 15px;
+  border:1px dashed black;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: rgb(70, 158, 179);
+  background-color: rgb(255, 255, 255)
+}
+
+.form-control {
+  border-color: rgb(0, 0, 0);
+  color: red; 
+}
+
+.btn-outline-success {
+  border-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); 
+}
+
+
+
+#footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(99, 211, 219);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0; 
+}
+
+.samesizeimg {
+  width: 6rem; 
+  height: 6rem; 
+  object-fit: cover; 
+  
+}
+
+.redmenu{
+  color: rgb(16, 9, 9);
+}
+
+.bodyback {
+  background-color:rgb(255, 255, 255)
+}
+
+ .jumboback{
+  background-color: white
+ }
+
+ .card{
+  border-radius: 20px;
+  color: black;
+  padding: 5px;
+ }
+
+ #product-qtty{
+  width: 40px; 
+  border: 1px solid #000000; 
+  border-radius: 5px; 
+  text-align: center; 
+  color: black;
+}
+
+ .category{
+border-radius: 10px;
+color:rgb(84, 185, 208)
+ }
+
+ 
+ .hidden-alert {
+  display: none;
+}
+
+.show-alert:checked+.alert {
+  display: block;
+}
+
+.promo{
+  background-color: rgb(255, 255, 255);
+  
+  border: 1px dashed black;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  border-radius: 15px;
+  color: rgb(21, 154, 187)
+}
+
+.inner-card{
+  border: 2px solid rgb(0, 0, 0); 
+  padding: 10px;
+  border-radius: 10px;
+  background-color:rgb(255, 255, 255)
+}
+
+.jumbo_back{
+background-color:rgb(166, 209, 226)
+}

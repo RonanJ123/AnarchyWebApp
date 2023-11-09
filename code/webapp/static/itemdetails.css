@@ -1,0 +1,124 @@
+
+.form-control::placeholder {
+  color: rgb(10, 12, 13);
+}
+
+.form-control {
+  border-color: rgb(103, 202, 227);
+  color: rgb(78, 231, 255); 
+}
+.btn-outline-success {
+  border-color: rgb(89, 193, 211);
+  color: rgb(89, 189, 206); 
+}
+
+#redback {
+  background-color: rgb(92, 189, 228);
+}
+#redtext {
+  color: rgb(0, 0, 0);
+}
+
+.categories-nav{
+  border-radius: 15px;
+  border: 1px solid black;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: rgb(21, 154, 187)
+}
+.btn-outline-success {
+  border-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); 
+}
+
+
+#product-qtty{
+    width: 40px; 
+    border: 1px solid #000000; 
+    border-radius: 5px; 
+    text-align: center; 
+    color: black;
+}
+
+
+.jumbo_back{
+  background-color:rgb(166, 209, 226)
+  }
+
+
+#footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(88, 194, 239);
+  
+  text-align: center;
+  
+  
+}
+
+.samesizeimg {
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.redmenu{
+  color: rgb(12, 8, 8);
+}
+
+.bodyback {
+  background-color:rgb(210, 210, 210)
+}
+
+ .jumboback{
+  background-color: white
+ }
+
+ .card{
+  border-radius: 20px;
+  color: black;
+  padding: 5px;
+ }
+
+ .category{
+border-radius: 10px;
+color:red
+ }
+
+ 
+ .hidden-alert {
+  display: none;
+}
+
+.show-alert:checked+.alert {
+  display: block;
+}
+
+.prodinfo{
+background-color: rgb(89, 198, 220);
+border-radius: 20px;
+border: 2px solid black
+
+}
+
+.reviews{
+  background-color: rgb(89, 198, 220);
+border-radius: 20px;
+border: 1px solid black;
+
+}
+
+.border-item{
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.form-group{
+  font-size: 15px;
+}
+
+.form-control{
+  height: 35px;
+
+}

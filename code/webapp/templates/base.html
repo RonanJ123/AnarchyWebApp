@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Products-Page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="..\code\webapp\css+images\products.css" />
+    <link rel="stylesheet" href="..\code\webapp\css+images\itemdetails.css" />
+    <link rel="stylesheet" href="..\code\webapp\css+images\orderconfirm.css" />
+
+    <style>
+      html {
+        font-size: 16px;
+      }
+
+      .form-control::placeholder {
+        color: rgb(10, 12, 13);
+      }
+
+      .form-control {
+        border-color: rgb(103, 202, 227);
+        color: rgb(78, 231, 255);
+      }
+      .btn-outline-success {
+        border-color: rgb(89, 193, 211);
+        color: rgb(89, 189, 206);
+      }
+
+      .form-group {
+        font-size: 1rem;
+      }
+
+      .form-control {
+        height: 2.2rem;
+      }
+
+      #redback {
+        background-color: rgb(92, 189, 228);
+      }
+      #redtext {
+        color: rgb(0, 0, 0);
+      }
+
+      .categories-nav {
+        border-radius: 15px;
+        border: 1px dashed black;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: rgb(70, 158, 179);
+        background-color: rgb(255, 255, 255);
+      }
+
+      .form-control {
+        border-color: rgb(0, 0, 0);
+        color: red;
+      }
+
+      .btn-outline-success {
+        border-color: rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+      }
+
+      #footer {
+        position: static;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(99, 211, 219);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .samesizeimg {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+      }
+
+      .redmenu {
+        color: rgb(16, 9, 9);
+      }
+
+      .bodyback {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .jumboback {
+        background-color: white;
+      }
+
+      .card {
+        border-radius: 20px;
+        color: black;
+        padding: 5px;
+        transition: all 0.3s ease;
+      }
+
+      #product-qtty {
+        width: 40px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        text-align: center;
+        color: black;
+      }
+
+      .category {
+        border-radius: 10px;
+        color: rgb(84, 185, 208);
+      }
+
+      .hidden-alert {
+        display: none;
+      }
+
+      .show-alert:checked + .alert {
+        display: block;
+      }
+
+      .cart {
+        border: 1px solid black;
+      }
+      .backblue {
+        background-color: rgb(92, 189, 228);
+      }
+
+      .promo {
+        background-color: rgb(255, 255, 255);
+
+        border: 1px dashed black;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 15px;
+        border-radius: 15px;
+        color: rgb(21, 154, 187);
+      }
+
+      .inner-card {
+        border: 2px solid rgb(0, 0, 0);
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .jumbo_back {
+        background-color: rgb(166, 209, 226);
+      }
+
+      .custom-card {
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        width: 15rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .custom-card .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .custom-card .card-text {
+        font-size: 0.8rem;
+        color: #555;
+      }
+
+      .custom-card .card-footer {
+        background-color: #f9f9f9;
+        padding: 10px 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .custom-card .btn-primary {
+        background-color: #3498db;
+        border-color: #2980b9;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .custom-card .btn-primary:hover {
+        background-color: #2980b9;
+        border-color: #2471a3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        style="margin-bottom: 1rem"
+        id="redback"
+        class="navbar navbar-expand-lg fixed-top"
+      >
+        <a id="redtext" class="navbar-brand" href="/"
+          ><i class="fas fa-pills"></i> Rad Ronan's Roids
+          <i class="fas fa-pills"></i>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon redmenu"> &#8645; </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a id="redtext" class="nav-link" href="/"
+                >Home <i class="fas fa-home"></i
+                ><span class="sr-only">(current)</span></a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                id="redtext"
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categorys
+                <i class="fas fa-folder"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/products/1">Base Steroids</a>
+                <a class="dropdown-item" href="/products/2"
+                  >Sports Performance
+                </a>
+                <a class="dropdown-item" href="/products/3"
+                  >Post Cycle Therapy and Health</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item active">
+              <a id="redtext" class="nav-link" href="{{url_for('main.order')}}"
+                >Basket <i class="fas fa-shopping-cart"></i>
+                <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a id="redtext" class="nav-link" href="#"
+                >Account <i class="fas fa-user"></i>
+                <span class="sr-only">(current)</span></a
+              >
+            </li>
+          </ul>
+          <form
+            class="form-inline my-2 my-lg-0"
+            action="{{ url_for('main.search') }}"
+            method="GET"
+          >
+            <input id=="redback" class="form-control mr-sm-2" type="search"
+            placeholder="Search" aria-label="Search" name="query" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+            <i class="fas fa-search"></i>
+          </form>
+        </div>
+      </nav>
+      <!-- functions with messages flash here-->
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <div style="margin-top: 60px" class="alert alert-primary" role="alert">
+        {% for message in messages %} {{ message }} {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+
+      <div class="container-fluid">{% block head %} {% endblock %}</div>
+    </header>
+
+    <div class="container-fluid">
+      <main>{% block main %} {% endblock %}</main>
+    </div>
+
+    <footer
+      style="margin-top: 3rem"
+      id="footer"
+      class="bg-black text-red text-center py-3"
+    >
+      <p id="redtext">ABN: 123456789 | Rad Ronan's Roids Pty. Ltd. 2023</p>
+    </footer>
+  </body>
+</html>

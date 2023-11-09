@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% block main %}
+
+<style>
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    background-color: #f0faff;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .card-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 80%;
+    height: 250px;
+    border-bottom: 1px solid #007bff;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-body {
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+
+  .card-text {
+    margin-top: 10px;
+    color: #333;
+  }
+
+  @media (max-width: 992px) {
+    .card {
+      width: calc(50% - 30px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .card {
+      width: calc(100% - 30px);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .custom-card {
+    width: 15rem;
+  }
+
+  .card {
+    width: 300px;
+    margin: 15px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .item-details-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .item-details-title {
+      text-align: left;
+    }
+  }
+</style>
+
+<div style="margin-top: 70px" class="container">
+  <h1 class="item-details-title">{{ Product.name }} - Item Details</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-12">
+      <div class="card custom-card">
+        <img
+          class="samesizeimg"
+          src="{{ url_for('static', filename=Product.image) }}"
+          alt="Product Image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Price:${{ Product.price }}</h5>
+          <p class="card-text">Name: {{ Product.name }}</p>
+          <p class="card-text">Description: {{ Product.description }}</p>
+          <p class="card-text">Item-Details: {{ Product.itemdetails }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

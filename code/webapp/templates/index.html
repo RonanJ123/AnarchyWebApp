@@ -1,0 +1,92 @@
+{% extends 'base.html' %} {% block head %}
+<div style="margin-top: 70px" class="jumbotron jumbotron-fluid card card-image">
+  <div class="text-dark text-center py-5 px-4">
+    <div>
+      <h1 class="display-2">Welcome to Rad Ronan's Roids!!!</h1>
+      <p class="display-4 text-dark">
+        Imagine what steroids could do for you! Its time to stock up!
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}{% block main %}
+
+<section>
+  <div class="container">
+    <div class="text-white text-center">
+      <div>
+        <p class="h1 text-dark mb-4">
+          So why shop for steroids at Ronans Roids?
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-6">
+        <article>
+          <h2>Pharmarcy Grade Products</h2>
+          <p>
+            Our products are all sourced from a local pharmacy making sure ouur
+            products are pure and 100% what we say they are!
+          </p>
+          <ul>
+            <li>
+              Products come with QR code you can scan and check pharmacy
+              database for batch number and contents!
+            </li>
+            <li>
+              Products also come in safe and secure packaging so your product
+              gets to you unharmed.
+            </li>
+          </ul>
+        </article>
+        <hr />
+      </div>
+      <div class="col-md-6">
+        <article>
+          <h2>Lots of extra's!</h2>
+          <p>Low shipping prices and free needle cleaning kits</p>
+          <p>
+            Quick dispatch of products and a large variety of customer service
+            representitaves to meet your needs!
+          </p>
+        </article>
+      </div>
+    </div>
+    <hr />
+  </div>
+</section>
+
+<section>
+  <div class="text-dark text-center">
+    <div>
+      <p class="h3 text-dark mb-4" id="Products_:)">
+        Explore our wide range of categories to suit all your steroid needs!
+      </p>
+
+      <p class="lead">
+        Unleash Your Potential with Rad Ronan's Roids. Where Power Meets
+        Precision! We only deal the best!
+      </p>
+    </div>
+  </div>
+  <div class="card-deck">
+    {% for category in Categorys %}
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ category.name }}</h4>
+        <p class="card-text">{{ category.description }}</p>
+      </div>
+      <div class="card-footer">
+        <a
+          href="{{ url_for('main.categoryproducts', categoryid=category.id) }}"
+          class="btn btn-primary"
+        >
+          View Products for {{category.name}}</a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% from 'bootstrap4/form.html' import render_form %}
+
+{% block main %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Checkout</h3>
+        <hr>
+        <p>
+          Thank you for your order from Ronans Rad Roids. Please provide your details so that your order can be sent to
+          our warehouse and so one of our customer service representatives can call you back and finalise payment!.
+          Thank you!
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        {{ render_form(form) }}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

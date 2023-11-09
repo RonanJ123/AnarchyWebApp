@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% block main %}
+
+<style></style>
+
+<section>
+  <div style="margin-top: 5rem" class="text-dark text-center">
+    <div>
+      <p class="h2 font-weight-bold text-primary mb-4">
+        View Our Wide Range of Products
+      </p>
+      <p class="h4 text-primary mb-4">
+        Select a Product from Your Chosen Category Below
+      </p>
+    </div>
+  </div>
+
+  <div class="card-columns">
+    {% for product in Products %}
+    <div class="card custom-card">
+      <img
+        class="samesizeimg"
+        src="{{ url_for('static', filename= product.image) }}"
+        alt="Card image"
+      />
+
+      <h4 class="card-title">{{ product.name }}</h4>
+      <h5>${{product.price}}</h5>
+      <p class="card-text">{{ product.description }}</p>
+
+      <div class="card-footer py-3">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2 mb-md-0">
+            <form
+              class="d-flex"
+              action="{{ url_for('main.order') }}"
+              method="POST"
+            >
+              <input type="hidden" name="product_id" value="{{ product.id }}" />
+              <input
+                type="number"
+                class="form-control mr-2"
+                name="quantity"
+                value="1"
+                min="1"
+                max="20"
+                style="width: 3rem"
+              />
+              <input
+                type="submit"
+                class="btn btn-md btn-primary"
+                value="Add to Basket"
+                style="width: 8rem"
+              />
+            </form>
+          </div>
+          <div class="col-12 col-md-6 text-md-right mt-2 mt-md-0">
+            <a
+              href="{{ url_for('main.itemdetailspage', product_id=product.id) }}"
+              class="btn btn-sm btn-primary"
+              >Details</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
